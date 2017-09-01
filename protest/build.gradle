@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
+version = '1.0.1'
 android {
     resourcePrefix "cc_"
 
@@ -13,7 +14,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -27,16 +28,17 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:24.2.1'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:0.5'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    debugCompile 'junit:junit:4.12'
+    debugCompile 'com.android.support.test:runner:0.5'
+    debugCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
 }
 
-def siteUrl = 'https://github.com/Tanghui123/CrashCatcher'   // 项目的主页
-def gitUrl = 'git@github.com:Tanghui123/CrashCatcher.git'   // Git仓库的url
+
+def siteUrl = 'https://github.com/Tanghui123/protest'   // 项目的主页
+def gitUrl = 'git@github.com:TangHui123/protest.git'   // Git仓库的url
 group = "com.truly.tanghui.protest"            // Maven Group ID for the artifact，一般填你唯一的包名
 install {
     repositories.mavenInstaller {
@@ -99,6 +101,9 @@ bintray {
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true
+        version {
+            desc = "123"
+        }
     }
 }
 
