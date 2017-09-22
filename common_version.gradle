@@ -6,10 +6,10 @@ ext {
     //build
     global_compileSdkVersion = 25
     global_buildToolsVersion = "25.0.3"
-    global_minSdkVersion = 14
-    global_targetSdkVersion = 22
+    global_minSdkVersion = 19
+    global_targetSdkVersion = 23
     //android library
-    global_androidSupportVersion = "25.3.1"
+    global_androidSupportVersion = "25.4.0"
     global_androidMultidexVersion = "1.0.1"
     global_androidConstraintLayoutVersion = "1.0.2"
     //test library
